@@ -34,7 +34,7 @@ jobs:
         run: nuget restore loan-management-system-template.sln
 
       - name: Build
-        run: dotnet build loan-management-system-template.sln
+        run: dotnet build loan-management-system-template.sln --framework net472 --force
 
       - name: Convert sarif for uploading to GitHub
         uses: security-code-scan/security-code-scan-results-action@v1.3
