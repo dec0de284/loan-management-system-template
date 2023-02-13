@@ -13,6 +13,7 @@ Might contain bugs if used.
     - Uses Third-party Database known as **Microsoft Access**
       - [ ] Find an alternative open-source database file creator, preferably under [CC0-1.0 License](https://creativecommons.org/publicdomain/zero/1.0/).
 - [ ] Add online database availability
+- [ ] Refactor the code
 # Warnings
 - Using Crystal Report 64-bit will not work properly with the 32-bit Microsoft Access Database. It's either you have to downgrade to Crystal Report 32-bit or upgrade your Microsoft Office to 64-bit.
 # Requirements
