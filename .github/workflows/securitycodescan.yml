@@ -29,7 +29,7 @@ jobs:
         uses: security-code-scan/security-code-scan-add-action@f8ff4f2763ed6f229eded80b1f9af82ae7f32a0d
 
       - name: Restore
-        run: dotnet restore loan-management-system-template.sln --configfile NuGet.Config
+        run: nuget restore loan-management-system-template.sln
 
       - name: Build
         run: dotnet build loan-management-system-template.sln --no-restore
