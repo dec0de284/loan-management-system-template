@@ -1,0 +1,733 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F9C9939D-5C44-4F24-A721-CD29D7329407}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>LoanManagementSystem.My.MyApplication</StartupObject>
+    <RootNamespace>LoanManagementSystem</RootNamespace>
+    <AssemblyName>LoanManagementSystem</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>0.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <Optimize>true</Optimize>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>Off</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.TemplateEngine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.Viewing.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataSetConversion, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ObjectFactory, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Prompting, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.XmlSerialize, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.VSDesigner, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Web, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountCreationNotice.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountCreationNotice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccountDetails.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountDetails.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="BalancePaymentDetails.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BalancePaymentDetails.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CalculationBreakdownDetails.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CalculationBreakdownDetails.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\DataBaseManagement.vb" />
+    <Compile Include="Classes\FileManagement.vb" />
+    <Compile Include="Classes\MessageBoxManagement.vb" />
+    <Compile Include="DeactivateClient.Designer.vb">
+      <DependentUpon>DeactivateClient.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DeactivateClient.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewClients.Designer.vb">
+      <DependentUpon>ViewClients.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewClients.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAuditLog.Designer.vb">
+      <DependentUpon>ViewAuditLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAuditLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAccounts.Designer.vb">
+      <DependentUpon>ViewAccounts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAccounts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserSecurityQuestionSelect.Designer.vb">
+      <DependentUpon>UserSecurityQuestionSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserSecurityQuestionSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserAccountSecurityQuestions.Designer.vb">
+      <DependentUpon>UserAccountSecurityQuestions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserAccountSecurityQuestions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserAccountCreation.Designer.vb">
+      <DependentUpon>UserAccountCreation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserAccountCreation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecurityQuestionSelect.Designer.vb">
+      <DependentUpon>SecurityQuestionSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityQuestionSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirstTimeSetupAdminAccountRecovery.Designer.vb">
+      <DependentUpon>FirstTimeSetupAdminAccountRecovery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FirstTimeSetupAdminAccountRecovery.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirstTimeSetupAdminAccount.Designer.vb">
+      <DependentUpon>FirstTimeSetupAdminAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FirstTimeSetupAdminAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectForm.Designer.vb">
+      <DependentUpon>SelectForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SelectForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewClientLoans.Designer.vb">
+      <DependentUpon>ViewClientLoans.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewClientLoans.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterestGainReportDetails.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InterestGainReportDetails.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MonthlyReport.vb">
+      <DependentUpon>MonthlyReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows Forms\ErrorForm.Designer.vb">
+      <DependentUpon>ErrorForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Windows Forms\ErrorForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows Forms\SetupForm.Designer.vb">
+      <DependentUpon>SetupForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Windows Forms\SetupForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YearlyReport.vb">
+      <DependentUpon>YearlyReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MonthlyReportFormFilter.Designer.vb">
+      <DependentUpon>MonthlyReportFormFilter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MonthlyReportFormFilter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YearlyReportFormFilter.Designer.vb">
+      <DependentUpon>YearlyReportFormFilter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="YearlyReportFormFilter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomReportFormFilter.Designer.vb">
+      <DependentUpon>CustomReportFormFilter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomReportFormFilter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteClient.Designer.vb">
+      <DependentUpon>DeleteClient.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteClient.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCapitalShareForm.Designer.vb">
+      <DependentUpon>AddCapitalShareForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddCapitalShareForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoanBalanceList.Designer.vb">
+      <DependentUpon>LoanBalanceList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoanBalanceList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddShareCapitalReport.vb">
+      <DependentUpon>AddShareCapitalReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LoanLoanFullyPaid.vb">
+      <DependentUpon>LoanLoanFullyPaid.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LoanBalancePayment.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoanBalancePayment.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LoanPaymentForm.Designer.vb">
+      <DependentUpon>LoanPaymentForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoanPaymentForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditClientForm.Designer.vb">
+      <DependentUpon>EditClientForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditClientForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddClientForm.Designer.vb">
+      <DependentUpon>AddClientForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddClientForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\Simple3Des.vb" />
+    <Compile Include="EditAccountDetails.Designer.vb">
+      <DependentUpon>EditAccountDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditAccountDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateAccount.Designer.vb">
+      <DependentUpon>CreateAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CreateAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateLoanProfile.Designer.vb">
+      <DependentUpon>CreateLoanProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CreateLoanProfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteAccount.Designer.vb">
+      <DependentUpon>DeleteAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientList.Designer.vb">
+      <DependentUpon>ClientList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Keypad.Designer.vb">
+      <DependentUpon>Keypad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Keypad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoanBreakDownForm.Designer.vb">
+      <DependentUpon>LoanBreakDownForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoanBreakDownForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoanCalculationBreakdown.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoanCalculationBreakdown.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LoanForm.Designer.vb">
+      <DependentUpon>LoanForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoanForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MonthlyInterestGainReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MonthlyInterestGainReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportForm.Designer.vb">
+      <DependentUpon>ReportForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportFormSample.Designer.vb">
+      <DependentUpon>ReportFormSample.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportFormSample.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditAccounts.Designer.vb">
+      <DependentUpon>EditAccounts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditAccounts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Report.Designer.vb">
+      <DependentUpon>Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignInForm.Designer.vb">
+      <DependentUpon>SignInForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SignInForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows Forms\SplashScreen.Designer.vb">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Windows Forms\SplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AccountCreationNotice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AccountCreationNotice.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeactivateClient.resx">
+      <DependentUpon>DeactivateClient.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewClients.resx">
+      <DependentUpon>ViewClients.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAuditLog.resx">
+      <DependentUpon>ViewAuditLog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAccounts.resx">
+      <DependentUpon>ViewAccounts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserSecurityQuestionSelect.resx">
+      <DependentUpon>UserSecurityQuestionSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAccountSecurityQuestions.resx">
+      <DependentUpon>UserAccountSecurityQuestions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAccountCreation.resx">
+      <DependentUpon>UserAccountCreation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SecurityQuestionSelect.resx">
+      <DependentUpon>SecurityQuestionSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirstTimeSetupAdminAccountRecovery.resx">
+      <DependentUpon>FirstTimeSetupAdminAccountRecovery.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirstTimeSetupAdminAccount.resx">
+      <DependentUpon>FirstTimeSetupAdminAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectForm.resx">
+      <DependentUpon>SelectForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewClientLoans.resx">
+      <DependentUpon>ViewClientLoans.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonthlyReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MonthlyReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows Forms\ErrorForm.resx">
+      <DependentUpon>ErrorForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows Forms\SetupForm.resx">
+      <DependentUpon>SetupForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YearlyReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>YearlyReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonthlyReportFormFilter.resx">
+      <DependentUpon>MonthlyReportFormFilter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YearlyReportFormFilter.resx">
+      <DependentUpon>YearlyReportFormFilter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomReportFormFilter.resx">
+      <DependentUpon>CustomReportFormFilter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteClient.resx">
+      <DependentUpon>DeleteClient.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCapitalShareForm.resx">
+      <DependentUpon>AddCapitalShareForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoanBalanceList.resx">
+      <DependentUpon>LoanBalanceList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddShareCapitalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AddShareCapitalReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoanLoanFullyPaid.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LoanLoanFullyPaid.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoanBalancePayment.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LoanBalancePayment.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoanPaymentForm.resx">
+      <DependentUpon>LoanPaymentForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditClientForm.resx">
+      <DependentUpon>EditClientForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddClientForm.resx">
+      <DependentUpon>AddClientForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditAccountDetails.resx">
+      <DependentUpon>EditAccountDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateAccount.resx">
+      <DependentUpon>CreateAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateLoanProfile.resx">
+      <DependentUpon>CreateLoanProfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteAccount.resx">
+      <DependentUpon>DeleteAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientList.resx">
+      <DependentUpon>ClientList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoanBreakDownForm.resx">
+      <DependentUpon>LoanBreakDownForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoanCalculationBreakdown.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LoanCalculationBreakdown.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoanForm.resx">
+      <DependentUpon>LoanForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonthlyInterestGainReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MonthlyInterestGainReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm.resx">
+      <DependentUpon>ReportForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportFormSample.resx">
+      <DependentUpon>ReportFormSample.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditAccounts.resx">
+      <DependentUpon>EditAccounts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignInForm.resx">
+      <DependentUpon>SignInForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows Forms\SplashScreen.resx">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AccountDetails.xsc">
+      <DependentUpon>AccountDetails.xsd</DependentUpon>
+    </None>
+    <None Include="AccountDetails.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AccountDetails.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="AccountDetails.xss">
+      <DependentUpon>AccountDetails.xsd</DependentUpon>
+    </None>
+    <None Include="BalancePaymentDetails.xsc">
+      <DependentUpon>BalancePaymentDetails.xsd</DependentUpon>
+    </None>
+    <None Include="BalancePaymentDetails.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BalancePaymentDetails.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="BalancePaymentDetails.xss">
+      <DependentUpon>BalancePaymentDetails.xsd</DependentUpon>
+    </None>
+    <None Include="CalculationBreakdownDetails.xsc">
+      <DependentUpon>CalculationBreakdownDetails.xsd</DependentUpon>
+    </None>
+    <None Include="CalculationBreakdownDetails.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CalculationBreakdownDetails.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="CalculationBreakdownDetails.xss">
+      <DependentUpon>CalculationBreakdownDetails.xsd</DependentUpon>
+    </None>
+    <None Include="InterestGainReportDetails.xsc">
+      <DependentUpon>InterestGainReportDetails.xsd</DependentUpon>
+    </None>
+    <None Include="InterestGainReportDetails.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InterestGainReportDetails.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="InterestGainReportDetails.xss">
+      <DependentUpon>InterestGainReportDetails.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Crystal Reports\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

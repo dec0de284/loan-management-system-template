@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="InterestGainReportDetails" targetNamespace="http://tempuri.org/InterestGainReportDetails.xsd" xmlns:mstns="http://tempuri.org/InterestGainReportDetails.xsd" xmlns="http://tempuri.org/InterestGainReportDetails.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="InterestGainReportDetails" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="InterestGainReportDetails" msprop:Generator_UserDSName="InterestGainReportDetails">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PaymentBreakdownDetails" msprop:Generator_TableClassName="PaymentBreakdownDetailsDataTable" msprop:Generator_TableVarName="tablePaymentBreakdownDetails" msprop:Generator_RowChangedName="PaymentBreakdownDetailsRowChanged" msprop:Generator_TablePropName="PaymentBreakdownDetails" msprop:Generator_RowDeletingName="PaymentBreakdownDetailsRowDeleting" msprop:Generator_RowChangingName="PaymentBreakdownDetailsRowChanging" msprop:Generator_RowEvHandlerName="PaymentBreakdownDetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="PaymentBreakdownDetailsRowDeleted" msprop:Generator_RowClassName="PaymentBreakdownDetailsRow" msprop:Generator_UserTableName="PaymentBreakdownDetails" msprop:Generator_RowEvArgName="PaymentBreakdownDetailsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="_Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:string" minOccurs="0" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Gain" msprop:Generator_ColumnVarNameInTable="columnGain" msprop:Generator_ColumnPropNameInRow="Gain" msprop:Generator_ColumnPropNameInTable="GainColumn" msprop:Generator_UserColumnName="Gain" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PaymentSummaryDetails" msprop:Generator_TableClassName="PaymentSummaryDetailsDataTable" msprop:Generator_TableVarName="tablePaymentSummaryDetails" msprop:Generator_RowChangedName="PaymentSummaryDetailsRowChanged" msprop:Generator_TablePropName="PaymentSummaryDetails" msprop:Generator_RowDeletingName="PaymentSummaryDetailsRowDeleting" msprop:Generator_RowChangingName="PaymentSummaryDetailsRowChanging" msprop:Generator_RowEvHandlerName="PaymentSummaryDetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="PaymentSummaryDetailsRowDeleted" msprop:Generator_RowClassName="PaymentSummaryDetailsRow" msprop:Generator_UserTableName="PaymentSummaryDetails" msprop:Generator_RowEvArgName="PaymentSummaryDetailsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="GainSum" msprop:Generator_ColumnVarNameInTable="columnGainSum" msprop:Generator_ColumnPropNameInRow="GainSum" msprop:Generator_ColumnPropNameInTable="GainSumColumn" msprop:Generator_UserColumnName="GainSum" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FilterDate" msprop:Generator_TableClassName="FilterDateDataTable" msprop:Generator_TableVarName="tableFilterDate" msprop:Generator_TablePropName="FilterDate" msprop:Generator_RowDeletingName="FilterDateRowDeleting" msprop:Generator_RowChangingName="FilterDateRowChanging" msprop:Generator_RowEvHandlerName="FilterDateRowChangeEventHandler" msprop:Generator_RowDeletedName="FilterDateRowDeleted" msprop:Generator_UserTableName="FilterDate" msprop:Generator_RowChangedName="FilterDateRowChanged" msprop:Generator_RowEvArgName="FilterDateRowChangeEvent" msprop:Generator_RowClassName="FilterDateRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DateString" msprop:Generator_ColumnVarNameInTable="columnDateString" msprop:Generator_ColumnPropNameInRow="DateString" msprop:Generator_ColumnPropNameInTable="DateStringColumn" msprop:Generator_UserColumnName="DateString" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
