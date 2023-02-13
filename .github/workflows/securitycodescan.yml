@@ -31,6 +31,9 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore
 
+      - name: list dir
+      - run: dir
+      
       - name: Build
         run: dotnet build --no-restore
 
