@@ -24,7 +24,7 @@ Might contain bugs if used.
   - you'll have to download [Crystal Report for Visual Studio SP33 32b (VS 2019 and below)](https://origin.softwaredownloads.sap.com/public/site/index.html).
 - else, create the database manually.
 ```sql
-' SQL Code soon
+' SQL Code Instructions soon
 ```
 
 # Access
