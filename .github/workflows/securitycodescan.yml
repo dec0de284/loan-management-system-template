@@ -32,7 +32,7 @@ jobs:
         run: dotnet restore
 
       - name: list dir
-      - run: dir
+        run: dir
       
       - name: Build
         run: dotnet build --no-restore
