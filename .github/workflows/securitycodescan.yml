@@ -10,12 +10,12 @@ name: SecurityCodeScan
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
     # The branches below must be a subset of the branches above
-    branches: [ "main" ]
+    branches: ["main"]
   schedule:
-    - cron: '43 10 * * 4'
+    - cron: "43 10 * * 4"
 
 jobs:
   SCS:
@@ -29,7 +29,7 @@ jobs:
         uses: security-code-scan/security-code-scan-add-action@f8ff4f2763ed6f229eded80b1f9af82ae7f32a0d
 
       - name: Restore
-        run: dotnet restore loan-management-system-template.sln
+        run: dotnet restore loan-management-system-template.sln --configfile NuGet.Config
 
       - name: Build
         run: dotnet build loan-management-system-template.sln --no-restore
