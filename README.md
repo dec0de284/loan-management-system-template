@@ -17,7 +17,8 @@ Might contain bugs if used.
 - Using Crystal Report 64-bit will not work properly with the 32-bit Microsoft Access Database. It's either you have to downgrade to Crystal Report 32-bit or upgrade your Microsoft Office to 64-bit.
 # Requirements
 - Visual Studio 2019 (Any edition)
-  - You could use higher versions Visual Studio but you have to also install Visual Studio 2019 because it's a requirement of **Crystal Report**.
+  - You could use higher versions of Visual Studio, but you have to also install Visual Studio 2019 because it's a requirement of **Crystal Report**.
+  - If you used higher versions of Visual Studio, you have to download both versions of **Crystal Report**, **SP33 32b** and SP33 64b**.
 - If you will use the Microsoft Access Database included in this repository,
   - you'll have to download [Crystal Report for Visual Studio SP33 32b (VS 2019 and below)](https://origin.softwaredownloads.sap.com/public/site/index.html).
 - else, create the database manually.
