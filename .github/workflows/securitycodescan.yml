@@ -21,21 +21,25 @@ jobs:
   SCS:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: nuget/setup-nuget@04b0c2b8d1b97922f67eca497d7cf0bf17b8ffe1
-      - uses: microsoft/setup-msbuild@v1.0.2
+      - uses: actions/checkout@latest
+      - uses: nuget/setup-nuget@latest
+      #- uses: nuget/setup-nuget@04b0c2b8d1b97922f67eca497d7cf0bf17b8ffe1
+      - uses: microsoft/setup-msbuild@latest
 
       - name: Set up projects for analysis
-        uses: security-code-scan/security-code-scan-add-action@f8ff4f2763ed6f229eded80b1f9af82ae7f32a0d
+        uses: security-code-scan/security-code-scan-add-action@latest
+        #uses: security-code-scan/security-code-scan-add-action@f8ff4f2763ed6f229eded80b1f9af82ae7f32a0d
 
       - name: Restore
         run: nuget restore loan-management-system-template.sln
 
       - name: Build
-        run: dotnet build loan-management-system-template.sln -f net48
+        run: dotnet build loan-management-system-template.sln
 
       - name: Convert sarif for uploading to GitHub
-        uses: security-code-scan/security-code-scan-results-action@cdb3d5e639054395e45bf401cba8688fcaf7a687
+        uses: security-code-scan/security-code-scan-results-action@latest
+        #uses: security-code-scan/security-code-scan-results-action@cdb3d5e639054395e45bf401cba8688fcaf7a687
 
       - name: Upload sarif
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@latest
+        #uses: github/codeql-action/upload-sarif@v2
