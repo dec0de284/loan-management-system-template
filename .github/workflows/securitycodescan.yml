@@ -35,7 +35,7 @@ jobs:
         run: dotnet build loan-management-system-template.sln
 
       - name: Convert sarif for uploading to GitHub
-        uses: dec0de284/security-code-scan-results-action@main
+        uses: security-code-scan/security-code-scan-results-action@v1.3
 
       - name: Upload sarif
         uses: github/codeql-action/upload-sarif@v2
