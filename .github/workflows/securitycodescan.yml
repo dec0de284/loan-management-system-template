@@ -34,11 +34,8 @@ jobs:
       - name: Build
         run: dotnet build loan-management-system-template.sln
 
-      - name: Install latest Sarif.Multitool
-        run: dotnet tool install --global Sarif.Multitool
-
       - name: Convert sarif for uploading to GitHub
-        uses: security-code-scan/security-code-scan-results-action@v1.3
+        uses: dec0de284/security-code-scan-results-action@456edd863633bd237c5e220440e97443be003f3b
 
       - name: Upload sarif
         uses: github/codeql-action/upload-sarif@v2
